@@ -1,10 +1,23 @@
 //This is the main GREYSHADE css file. 
 
 body {
-	background: #3D4349;
+	background: #F5F5F5;
 	font-family: "Open Sans", "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,sans-serif;
+
+	a {
+		color: #3887D6;
+	}
+	a:hover {
+		color: #3887D6;
+	}
+
+	img {
+		border: 0px;
+	}
 }
 
+
+$greyshade: #eee;
 ::selection, ::-moz-selection, ::-webkit-selection {
   background-color: $greyshade;
   color: $color-background;
@@ -14,8 +27,9 @@ body {
 	height: auto;
 	border-bottom: none;
 	.subtitle {
-		color: #999;
-		font-style: italic;
+		
+		font-size: 15px;
+	    font-style: italic;
 	}
 	#sub-nav {
 		float: none;
@@ -33,6 +47,12 @@ body {
 
 	h1 {
 		float: none;
+		font-size: 30px;
+    	font-weight: 300;
+	}
+
+	h2 {
+		font-size:30px;
 	}
 
 	#main-nav {
@@ -132,7 +152,7 @@ body {
 							transition: color 0.3s;	
 						}
 						a:hover {
-							color: $greyshade;
+							color: #3887D6;
 							-webkit-transition: color 0.3s;
 							-moz-transition: color 0.3s;
 							-o-transition: color 0.3s;
@@ -150,17 +170,22 @@ body {
 		opacity: 1;
 	}
 	.left-col {
+		background-color: #1E8CBE;
+	    background-image: linear-gradient(to right, #2EA2CC, #1E8CBE);
+	    color: #FFFFFF;
+	    text-shadow: 0 2px 2px #0074A2;
+	    border-right: 1px solid rgba(0, 86, 132, 0.5);
+	    box-shadow: 0 0px 2px rgba(0, 0, 0, 0.2);
+
+	    font-family: "proxima-nova-soft","Helvetica Neue",Helvetica,sans-serif;
+
 		width: 23%;
 		position: fixed;
-		opacity: .3;
-		-webkit-transition: all .2s ease-in;
-		-moz-transition: all .2s ease-in;
-		-o-transition: all .2s ease-in;
-		-ms-transition: all .2s ease-in;
-		transition: all .2s ease-in;
+		
 		height: 100%;
 		.intrude-less {
 			width: 80%;
+			margin: 0 auto;
 		}
 		#header {
 			width: 100%;
@@ -168,13 +193,15 @@ body {
 			#main-nav {
 				margin-top: 10px;
 			}
-			.profilepic {
-				img {
-					border-radius: 50%;
-					-moz-border-radius: 50%;
-					-webkit-border-radius: 50%;
-				}
+			.site_title {
+				margin-bottom:30px;
+				display: block;
 			}
+
+			.title{
+				font-size: 35px;
+			}
+			.profile_pic{width: 80px; margin-left: 50px;}
 			a {
 				color: #EFEFEF;
 				text-shadow: 0 1px #333;
@@ -223,7 +250,7 @@ body {
 			margin: 0 0;
 	}
 }
-@media screen and (max-width: 700px){
+@media screen and (max-width: 1000px){
 	.container {
 		.credit-box {
 			display: none;
@@ -233,7 +260,8 @@ body {
 			width: 100%;
 			opacity: 1;
 			.intrude-less {
-				margin: auto auto;
+				margin: 0px auto;
+				display: block;
 			}
 			#header {
 				padding: 40px 0px;
@@ -244,9 +272,13 @@ body {
 				#main-nav {
 						ul {	
 							display: block;
+							list-style: none;
 							li {
 								display: inline;
 								margin-right: 10px;
+								a {
+									font-size: 14px !important;
+								}
 							}
 						}
 				}
@@ -267,4 +299,11 @@ body {
 			}
 		}
 	}
+}
+
+.aligncenter {
+	clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

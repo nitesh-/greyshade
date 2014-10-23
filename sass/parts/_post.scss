@@ -18,8 +18,7 @@
 			width: auto;
 		}
 		a{
-			@include link-colors($color-gray02, $color-gray01);
-			@include transition(0.3s);
+			color: #3887D6;
 		}
 		.date, .tags, .comments{
 			padding-left: 30px;
